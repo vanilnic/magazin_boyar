@@ -1,6 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.RegSQLite" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/title_color</item>
+        <item name="android:navigationBarColor">@color/title_color</item>
+
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>

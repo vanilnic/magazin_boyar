@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="title_color">#8AB35B</color>
+
     <color name="main_reg">#96CC57</color>
     <color name="btn_reg">#429C46</color>
 

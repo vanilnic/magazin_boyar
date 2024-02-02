@@ -39,6 +39,16 @@
         android:text="TextView" />
 
     <TextView
+        android:id="@+id/item_list_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="TextView" />
+
+    <TextView
         android:id="@+id/item_list_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,5 +67,5 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/btn_card"
         android:textColor="@color/white"
-        android:text="Посмотреть" />
+        android:text="Купить" />
 </LinearLayout>

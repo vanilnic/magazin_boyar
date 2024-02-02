@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.Adapter<ItemsAdapter.MyViewHolder>() {
@@ -14,7 +16,9 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
         val image: ImageView = view.findViewById(R.id.item_list_image)
         val title: TextView = view.findViewById(R.id.item_list_title)
         val desc: TextView = view.findViewById(R.id.item_list_desc)
+        val amount: TextView = view.findViewById(R.id.item_list_amount)
         val price: TextView = view.findViewById(R.id.item_list_price)
+        val btn: Button = view.findViewById(R.id.item_list_button)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -29,7 +33,8 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = items[position].title
         holder.desc.text = items[position].desc
-        holder.price.text = items[position].price.toString() + "$"
+        holder.amount.text = "В наличии:   " + items[position].amount + "шт."
+        holder.price.text = items[position].price.toString() + "руб."
 
         val imageId = context.resources.getIdentifier(
             items[position].image,
@@ -38,5 +43,27 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
         )
 
         holder.image.setImageResource(imageId)
+
+        var amount_val: Int = items[position].amount
+
+        holder.btn.setOnClickListener {
+            if(amount_val > 0) {
+                Toast.makeText(context, "Куплено!", Toast.LENGTH_SHORT).show()
+
+                val amount_sale: Int = 1
+                val id_card: Int = items[position].id
+
+
+                val qwerty = amount_val - amount_sale
+                amount_val = qwerty
+
+
+
+                holder.amount.text = "В наличии:   " + amount_val.toString() + "шт."
+            }
+
+            else
+                Toast.makeText(context, "Товар закончился", Toast.LENGTH_SHORT).show()
+        }
     }
 }

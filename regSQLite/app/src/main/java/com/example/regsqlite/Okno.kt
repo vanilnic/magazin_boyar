@@ -13,9 +13,9 @@ class Okno : AppCompatActivity() {
         val itemsList: RecyclerView = findViewById(R.id.itemsList)
         val items = arrayListOf<Item>()
 
-        items.add(Item(1, "one", "говно", "залупа", "пенис", 100))
-        items.add(Item(2, "two", "хер", "давалка", "хуй", 200))
-        items.add(Item(3, "three", "блядина", "головка", "жопа", 300))
+        items.add(Item(1, "one", "Крымская Стевия", "с плодами боярышника", 2, 200))
+        items.add(Item(2, "two", "Боярышник", "ВитаЦентр,   20 пакетиков", 3, 250))
+        items.add(Item(3, "three", "Каркадэ", "с боярышником", 2, 400))
 
         itemsList.layoutManager = LinearLayoutManager(this)
         itemsList.adapter = ItemsAdapter(items, this)
