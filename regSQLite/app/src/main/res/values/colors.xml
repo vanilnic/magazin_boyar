@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_reg">#96CC57</color>
+    <color name="btn_reg">#429C46</color>
+
+
+    <color name="main_auth">#82B14B</color>
+    <color name="btn_auth">#37833B</color>
+
+
+    <color name="header_vinous">#37833B</color>
+    <color name="main_card">#82B14B</color>
+    <color name="btn_card">#37833B</color>
+    <color name="card">#8BC34A</color>
+
+
+</resources>
